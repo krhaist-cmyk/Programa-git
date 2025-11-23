@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  <title>Show Message</title>
+  <link rel="stylesheet" href="page_asthetic.css" />
+</head>
+<body>
+  <h1 id="hiText" class="greeting hidden">HI! :)</h1>
+  <button id="toggleButton" class="my-button" onclick="toggleMessage()">CLICK ME >:)!</button>
+
+  <script>
+    function toggleMessage() {
+      const message = document.getElementById("hiText");
+      const button = document.getElementById("toggleButton");
+
+      if (message.classList.contains("hidden")) {
+        message.classList.remove("hidden");
+        button.textContent = "Have a nice day :D!";
+      } else {
+        message.classList.add("hidden");
+        button.textContent = "CLICK ME >:)!";
+      }
+    }
+  </script>
+</body>
+</html>
